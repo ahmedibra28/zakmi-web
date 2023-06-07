@@ -1,23 +1,89 @@
+'use client'
+
+import Link from 'next/link'
+import { Fragment } from 'react'
+
+const date = new Date()
+const currentYear = date.getFullYear()
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
-        <div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none'></div>
+    <Fragment>
+      <div className='navbar bg-base-100 sticky top-0 z-50'>
+        <div className='navbar-start'>
+          <Link href='/#home' className='btn btn-ghost normal-case text-xl'>
+            Zakmi Technologies
+          </Link>
+        </div>
+
+        <div className='navbar-end'>
+          <Link href='/#contact' className='btn'>
+            Contact
+          </Link>
+        </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        {/* <Image
-          className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
-          src='/next.svg'
-          alt='Next.js Logo'
-          width={180}
-          height={37}
-          priority
-        /> */}
-        <p>We are under construction</p>
+      <div id='home' className='hero min-h-screen bg-base-200'>
+        <div className='hero-content text-center'>
+          <div className='max-w-2xl'>
+            <h1 className='text-4xl font-bold'>
+              Let&apos;s Build Something Great Together
+            </h1>
+            <p className='py-6'>
+              We build innovative web and mobile apps that help you achieve your
+              goals. Our experienced team brings your vision to life with
+              cutting-edge tech and creative solutions. Let&apos;s work together
+              to build something great.
+            </p>
+            <Link href='/#contact' className='btn btn-primary'>
+              Get In Touch!
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <div className='mb-32 grid text-center lg:mb-0 lg:grid-cols-4'></div>
-    </main>
+      <div className='flex flex-col lg:flex-row justify-center items-center bg-base-200 mx-w-2xl px-3'>
+        {/* {[...Array(3)].map((_, i) => ( */}
+        <div className='card h-60 w-full sm:w-[70%] md:w-[70%] lg:w-[45%] bg-base-100 shadow-sm m-3'>
+          <div className='card-body'>
+            <h2 className='card-title'>Out Mission</h2>
+            <p>
+              Our mission is to build innovative web and mobile applications
+              that help our clients achieve their goals. We strive to deliver
+              cutting-edge technology and creative solutions that exceed our
+              clients&apos; expectations.
+            </p>
+          </div>
+        </div>
+        <div className='card h-60 w-full sm:w-[70%] md:w-[70%] lg:w-[45%] bg-base-100 shadow-sm m-3'>
+          <div className='card-body'>
+            <h2 className='card-title'>Out Vision</h2>
+            <p>
+              Our vision is to be the go-to partner for businesses and
+              organizations looking to leverage technology to achieve their
+              goals. We aim to be recognized for our innovative solutions,
+              exceptional customer service, and commitment to delivering value
+              to our clients.
+            </p>
+          </div>
+        </div>
+        {/* ))} */}
+      </div>
+
+      <div id='contact' className='mx-auto text-center bg-base-200 py-44 px-3'>
+        <h1 className='text-4xl font-bold'>Contact us</h1>
+        <p className='mt-3'>
+          Email us at <a href='mailto:inf@zakmi.com'>inf@zakmi.com</a> or call
+          us at <a href='tel:+254799112976'>+254 799 112 976</a>
+        </p>
+      </div>
+
+      <footer className='bg-base-200 text-center py-10'>
+        <hr />
+        <div className='p-4'>
+          <div>Copyright {currentYear} &copy; All Rights Reserved</div>
+        </div>
+      </footer>
+    </Fragment>
   )
 }
