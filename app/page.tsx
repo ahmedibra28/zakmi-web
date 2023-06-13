@@ -73,7 +73,7 @@ export default function Home() {
       <div id='contact' className='mx-auto text-center bg-base-200 py-44 px-3'>
         <h1 className='text-4xl font-bold'>Contact us</h1>
         <p className='mt-3'>
-          Email us at <a href='mailto:inf@zakmi.tech'>inf@zakmi.tech</a> or call
+          Email us at <a href='mailto:info@zakmi.tech'>info@zakmi.tech</a> or call
           us at <a href='tel:+254799112976'>+254 799 112 976</a>
         </p>
       </div>
